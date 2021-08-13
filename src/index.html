@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,26 @@
     <script src="scripts/index.js" defer type="module"></script>
     <title>ExtBel</title>
 </head>
+
 <body>
-    
+    <header className="header">
+        <img className="logo" />
+        <nav className="header__nav">
+            <ul className="header__nav-list">
+                <li class="header__nav-item"><a href="#" class="header__nav-link">Main</a></li>
+                <li class="header__nav-item"><a href="#" class="header__nav-link">Services</a></li>
+                <li class="header__nav-item"><a href="#" class="header__nav-link">Projects</a></li>
+                <li class="header__nav-item"><a href="#" class="header__nav-link">Contacts</a></li>
+                <li class="header__nav-item"><a href="#" class="header__nav-link">About us</a></li>
+            </ul>
+        </nav>
+        <form className="search">
+            <input className ="search__field" type="search"/>
+            <button className="search__submit"></button>
+        </form>
+        <button className="login">Log in</button>
+    </header>
+
 </body>
+
 </html>
