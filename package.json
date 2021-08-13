@@ -1,0 +1,35 @@
+{
+  "name": "ExtBel",
+  "version": "1.0.0",
+  "description": "Тестовое задание для компании 'ExtBel'.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js",
+    "dev": "webpack --config webpack.dev.js",
+    "start": "webpack serve --config webpack.dev.js --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arturvolokhin/ExtBel.git"
+  },
+  "author": "Artur Volokhin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arturvolokhin/ExtBel/issues"
+  },
+  "homepage": "https://github.com/arturvolokhin/ExtBel#readme",
+  "devDependencies": {
+    "css-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.2",
+    "sass": "^1.37.5",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.2.1",
+    "webpack": "^5.39.1",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "webpack-merge": "^5.8.0"
+  }
+}
