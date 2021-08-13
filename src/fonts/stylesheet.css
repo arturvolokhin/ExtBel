@@ -1,0 +1,16 @@
+
+@font-face {
+    font-family: 'Noto Sans';
+    src: local('NotoSans-Regular'),
+        url('Roboto-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: regular;
+}
+
+@font-face {
+    font-family: 'Noto Sans';
+    src: local('NotoSans-Bold'),
+        url('Roboto-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: bold;
+}
