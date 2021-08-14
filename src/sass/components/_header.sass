@@ -14,7 +14,7 @@
             display: flex
             justify-content: space-between
             list-style: none
-            
+
         &-link
             color: $main-color
             font-size: 20px
@@ -36,6 +36,8 @@
             background: url(/images/icons/search.svg) no-repeat center
             background-color: $interactive-color
             border: none
+            &:hover
+                background-color: $title-color
 
     &__login
         position: relative
@@ -45,6 +47,8 @@
         background: none
         font-size: 20px
         text-align: right
+        overflow: hidden
+
         &::before
             content: ''
             position: absolute
@@ -54,9 +58,16 @@
             width: 22px
             height: 22px
             background: url(/images/icons/login.svg) no-repeat center
-
-
-
-.logo
-    width: 106px
-    height: 50px
+        &::after
+            content: ''
+            position: absolute
+            left: -100%
+            bottom: 5px
+            display: block
+            width: inherit
+            height: 1px
+            background: $interactive-color
+            border: none
+            transition: 0.15s linear
+        &:hover::after
+            left: 0
