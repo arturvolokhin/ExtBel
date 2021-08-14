@@ -1,0 +1,55 @@
+.slick
+    &-track
+        display: flex
+    &-arrow
+        position: absolute
+        top: calc(50% - 25px)
+        display: block
+        width: 50px
+        height: 50px
+        border-radius: 50%
+        border: 1px solid $interactive-color
+        background: #fff
+        font-size: 0
+        z-index: 1
+    &-prev
+        left: 0
+        background: url(/images/icons/arrow-left.svg) no-repeat center
+    &-next
+        right: 0
+        background: url(/images/icons/arrow-right.svg) no-repeat center
+    &-list
+        margin: 0 0 0 -10px
+        overflow: hidden
+
+    &-track
+        margin: 0px 0px 0px -30px
+
+    &-slide
+        margin: 0 30px 0 0
+        width: 605px !important
+
+    &-dots
+        margin: 46px 0 0
+        display: flex
+        justify-content: center
+        list-style: none
+        &>li
+            margin: 0 16px 0 0
+            display: block
+            font-size: 0
+            width: 15px
+            height: 15px
+            border-radius: 50%
+            background: rgba(63, 151, 251, 0.3)
+            &:nth-last-child(1)
+                margin: 0
+
+            &>button
+                border: none
+                width: inherit
+                height: inherit
+                background: transparent
+                border-radius: 50%
+        &>li.slick-active
+            background: $interactive-color

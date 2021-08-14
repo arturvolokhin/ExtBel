@@ -1,4 +1,5 @@
 const path = require("path");
+const webpack = require("webpack");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
@@ -17,6 +18,11 @@ module.exports = {
             title: "ExtBel",
             template: "./index.html",
         }),
+
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery",
+        }),
     ],
 
     module: {
@@ -25,7 +31,7 @@ module.exports = {
                 test: /\.html$/i,
                 loader: "html-loader",
             },
-            
+
             {
                 test: /\.(sass|css)$/i,
                 use: ["style-loader", "css-loader", "sass-loader"],
