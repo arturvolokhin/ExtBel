@@ -10,48 +10,54 @@
 </head>
 
 <body>
-    <header class="header">
-        <img class="logo" src="./images/logo.svg"/>
-        <nav class="header__nav">
-            <ul class="header__nav-list">
-                <li class="header__nav-item"><a href="#" class="header__nav-link">Main</a></li>
-                <li class="header__nav-item"><a href="#" class="header__nav-link">Services</a></li>
-                <li class="header__nav-item"><a href="#" class="header__nav-link">Projects</a></li>
-                <li class="header__nav-item"><a href="#" class="header__nav-link">Contacts</a></li>
-                <li class="header__nav-item"><a href="#" class="header__nav-link">About us</a></li>
-            </ul>
-        </nav>
-        <form class="header__search">
-            <input class="header__search-field" type="search" />
-            <button class="header__search-submit"></button>
-        </form>
-        <button class="header__login">Log in</button>
-    </header>
-    
-    <main>
-        <section class="advantages">
-            <h1>Software development and optimization</h1>
-            <article class="advantages__item">
-                <h3 class="advantages__item-title">We give guarantees</h3>
-                <p class="advantages__item-descr">
-                    We work only by agreement and we do not take payment for the work
-                    that has not yet been completed.</p>
-                <a class="advantages__item-link">Learn more</a>
-            </article>
-            <article class="advantages__item">
-                <h3 class="advantages__item-title">We support the project </h3>
-                <p class="advantages__item-descr">We know how to attract targeted 
-                    traffic to a site and convert itinto sales.</p>
-                <a class="advantages__item-link">Learn more</a>
-            </article>
-            <article class="advantages__item">
-                <h3 class="advantages__item-title">We are always in touch</h3>
-                <p class="advantages__item-descr">We are always on the line 24/7.
-                    Seriously. Even if you just want to talk.</p>
-                <a class="advantages__item-link">Learn more</a>
-            </article>
-        </section>
-    </main>
+    <div class="wrapper">
+        <header class="header">
+            <img class="logo" src="./images/logo.svg" />
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item"><a href="#" class="header__nav-link">Main</a></li>
+                    <li class="header__nav-item"><a href="#" class="header__nav-link">Services</a></li>
+                    <li class="header__nav-item"><a href="#" class="header__nav-link">Projects</a></li>
+                    <li class="header__nav-item"><a href="#" class="header__nav-link">Contacts</a></li>
+                    <li class="header__nav-item"><a href="#" class="header__nav-link">About us</a></li>
+                </ul>
+            </nav>
+            <form class="header__search">
+                <input class="header__search-field" type="search" />
+                <button class="header__search-submit"></button>
+            </form>
+            <button class="header__login">Log in</button>
+        </header>
+
+        <main>
+            <section class="advantages">
+                <div class="advantages__container">
+                    <h1 class="advantages__title">Software development and optimization</h1>
+                    <div class="advantages__content">
+                        <article class="advantages__card">
+                            <h3 class="advantages__card-title">We give guarantees</h3>
+                            <p class="advantages__card-descr">
+                                We work only by agreement and we do not take payment for the work
+                                that has not yet been completed.</p>
+                            <a class="advantages__card-link" href="#">Learn more</a>
+                        </article>
+                        <article class="advantages__card">
+                            <h3 class="advantages__card-title">We support the project </h3>
+                            <p class="advantages__card-descr">We know how to attract targeted
+                                traffic to a site and convert itinto sales.</p>
+                            <a class="advantages__card-link" href="#">Learn more</a>
+                        </article>
+                        <article class="advantages__card">
+                            <h3 class="advantages__card-title">We are always in touch</h3>
+                            <p class="advantages__card-descr">We are always on the line 24/7.
+                                Seriously. Even if you just want to talk.</p>
+                            <a class="advantages__card-link" href="#">Learn more</a>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
 
 </body>
 
