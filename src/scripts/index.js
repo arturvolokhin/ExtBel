@@ -27,7 +27,6 @@ document.addEventListener("click", ({ target }) => {
     }
 
     if (target.closest(".burger")) {
-        document.querySelector(".burger__icon").classList.toggle("active");
         toggleMenu();
     }
 

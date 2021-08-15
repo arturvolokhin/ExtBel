@@ -312,6 +312,17 @@ time, mark, audio, video {
   [type="search"] {
     -webkit-appearance: textfield; /* 1 */
     outline-offset: -2px; /* 2 */
+    input[type="search"]::-ms-clear {  display: none; width : 0; height: 0; }
+    input[type="search"]::-ms-reveal {  display: none; width : 0; height: 0; }
+    input::-webkit-search-decoration,
+    input::-webkit-search-cancel-button,
+    input::-webkit-search-results-button,
+    input::-webkit-search-results-decoration { display: none; }
+  }
+
+  input::-webkit-clear-button { /* Removes blue cross */
+    -webkit-appearance: none;
+    margin: 0;
   }
   
   /**
