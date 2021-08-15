@@ -16,15 +16,3 @@ $(document).ready(() => {
         ]
     });
 });
-
-
-export const paintSlider = ({ image, title, desc, link }) => {
-    return `<div class="projects__slider-item">
-                <img class="projects__slider-image" src=${image} alt="Our project">
-                <div class="projects__slider-text">
-                    <h3 class="projects__slider-title">${title}</h3>
-                    <p class="projects__slider-desc">${desc}</p>
-                    <a href="#" class="projects__slider-link">${link}</a>
-                </div>
-            </div>`;
-};

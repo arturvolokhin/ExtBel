@@ -1,7 +1,8 @@
 import odnoKarta from "../images/slider/OdnoKarta.png";
 import raketa from "../images/slider/Raketa.png";
-import { paintSlider } from "./slider";
 const projectsSlider = document.querySelector(".projects__slider");
+
+export const fakeSearchData = [];
 
 const slidersData = [
     {
@@ -52,6 +53,17 @@ const slidersData = [
         link: "Read more",
     },
 ];
+
+export const paintSlider = ({ image, title, desc, link }) => {
+    return `<div class="projects__slider-item">
+                <img class="projects__slider-image" src=${image} alt="Our project">
+                <div class="projects__slider-text">
+                    <h3 class="projects__slider-title">${title}</h3>
+                    <p class="projects__slider-desc">${desc}</p>
+                    <a href="#" class="projects__slider-link">${link}</a>
+                </div>
+            </div>`;
+};
 
 slidersData.forEach((slider) => {
     const { image, title, desc, link } = slider;

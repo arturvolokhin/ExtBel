@@ -1,0 +1,51 @@
+.burger
+    position: absolute
+    left: 33px
+    top: calc(50% - 18px)
+    width: 45px
+    height: 36px
+    cursor: pointer
+    &__icon
+        width: 100%
+        position: absolute
+        transform: translateY(15px)
+        height: 5px
+        background: #333
+        display: block
+        transition: .3s
+        border-radius: 5px
+        &::before
+            content: ""
+            width: 100%
+            position: absolute
+            height: 5px
+            background: #333
+            display: block
+            transition: .3s
+            border-radius: 5px
+            top: -14px
+            transition: top 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1)
+        &::after
+            content: ""
+            width: 100%
+            position: absolute
+            height: 5px
+            background: #333
+            display: block
+            transition: .3s
+            border-radius: 5px
+            bottom: -14px
+            transition: bottom 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1)
+
+.active
+    background: rgba(255, 255, 255, 0)
+    &::before
+        content: ""
+        top: 0 !important
+        transform: rotate(45deg)
+        transition: top 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55)
+    &::after
+        content: ""
+        bottom: 0 !important
+        transform: rotate(-45deg)
+        transition: bottom 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55)

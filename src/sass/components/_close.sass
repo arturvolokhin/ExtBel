@@ -1,0 +1,32 @@
+.close
+    position: absolute
+    top: 16px
+    right: 26px
+    display: block
+    width: 20px
+    height: 20px
+    cursor: pointer
+    &::after
+        content: ''
+        position: absolute
+        top: 50%
+        display: block
+        height: 2px
+        width: 20px
+        transform: rotate(45deg)
+        background: $main-color
+        transition: 0.2s linear
+    &::before
+        content: ''
+        position: absolute
+        top: 50%
+        display: block
+        height: 2px
+        width: 20px
+        transform: rotate(135deg)
+        background: $main-color
+        transition: 0.2s linear
+    &:hover::after
+        transform: rotate(135deg)
+    &:hover::before
+        transform: rotate(225deg)
