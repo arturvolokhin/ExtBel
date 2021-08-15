@@ -5,8 +5,18 @@ $(document).ready(() => {
         dots: true,
         slidesToShow: 2,
         slidesToScroll: 2,
+        responsive: [
+            {
+                breakpoint: 721,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     });
 });
+
 
 export const paintSlider = ({ image, title, desc, link }) => {
     return `<div class="projects__slider-item">

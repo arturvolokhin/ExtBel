@@ -1,6 +1,12 @@
 .slick
     &-track
         display: flex
+    &-prev
+        left: 0
+        background: url(/images/icons/arrow-left.svg) no-repeat center
+    &-next
+        right: 0
+        background: url(/images/icons/arrow-right.svg) no-repeat center
     &-arrow
         position: absolute
         top: calc(50% - 70px)
@@ -9,15 +15,9 @@
         height: 50px
         border-radius: 50%
         border: 1px solid $interactive-color
-        background: #fff
+        background-color: rgba(255, 255, 255, 0.8)
         font-size: 0
         z-index: 1
-    &-prev
-        left: 0
-        background: url(/images/icons/arrow-left.svg) no-repeat center
-    &-next
-        right: 0
-        background: url(/images/icons/arrow-right.svg) no-repeat center
     &-list
         margin: 0 auto
         overflow: hidden
