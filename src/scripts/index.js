@@ -7,6 +7,18 @@ const toggle = (name, classes) => {
     document.querySelector(`${name}`).classList.toggle(`${classes}`);
 };
 
+window.onload = () => {
+    //setTimeOut использован специально,
+    //для имитации медленного интернет-соединения.
+    const preloader = document.querySelector(".preloader");
+    setTimeout(() => {
+        preloader.classList.add("hide");
+    }, 2000);
+    setTimeout(() => {
+        preloader.remove();
+    }, 2500);
+};
+
 const toggleMenu = () => {
     toggle(".menu", "openMenu");
     toggle(".blur", "block");
@@ -18,7 +30,7 @@ const toggleLogin = () => {
 };
 
 const setSearchWarning = (value) => {
-    document.querySelector('.search__mobile-warning').innerHTML = value;
+    document.querySelector(".search__mobile-warning").innerHTML = value;
 };
 
 document.addEventListener("click", ({ target }) => {
@@ -35,7 +47,7 @@ document.addEventListener("click", ({ target }) => {
     }
 
     if (target.classList.contains("search__mobile-submit")) {
-        const searchField = document.querySelector(".search__mobile-field")
+        const searchField = document.querySelector(".search__mobile-field");
         const value = searchField.value.toLowerCase();
         const result = [];
         //В базе данных получаем строки в виде тегов для поиска
@@ -50,8 +62,8 @@ document.addEventListener("click", ({ target }) => {
         foundResults.length === 0 &&
             setSearchWarning(`Nothing found at your request.
             Try another value`);
-        
-        searchField.value = "";    
+
+        searchField.value = "";
     }
 });
 
