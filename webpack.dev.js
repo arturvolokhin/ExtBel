@@ -6,9 +6,15 @@ module.exports = merge(base, {
     
     mode: 'development',
 
+    output: {
+        path: path.resolve(__dirname, "dist"),
+        filename: "bundle.js",
+        clean: true,
+    },
+
     devServer: {
         publicPath: "/",
-        contentBase: path.resolve(__dirname, 'dist'),
+        contentBase: path.resolve(__dirname, 'build'),
         compress: true,
         port: 9000,
         hot: true,

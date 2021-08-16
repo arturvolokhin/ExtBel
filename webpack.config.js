@@ -1,6 +1,7 @@
 const path = require("path");
 const webpack = require("webpack");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
     context: path.resolve(__dirname, "src"),
@@ -8,7 +9,7 @@ module.exports = {
     entry: "./scripts/index.js",
 
     output: {
-        path: path.resolve(__dirname, "dist"),
+        path: path.resolve(__dirname, "build"),
         filename: "bundle.js",
         clean: true,
     },
@@ -23,9 +24,12 @@ module.exports = {
             $: "jquery",
             jQuery: "jquery",
         }),
+
+        new MiniCssExtractPlugin(),
     ],
 
     module: {
+
         rules: [
             {
                 test: /\.html$/i,
@@ -34,7 +38,7 @@ module.exports = {
 
             {
                 test: /\.(sass|css)$/i,
-                use: ["style-loader", "css-loader", "sass-loader"],
+                use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
             },
 
             {
@@ -45,6 +49,9 @@ module.exports = {
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: "asset/resource",
+                generator: {
+                    filename: 'images/[hash][ext][query]'
+                }
             },
         ],
     },

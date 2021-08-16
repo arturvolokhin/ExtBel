@@ -6,6 +6,12 @@ module.exports = merge(base, {
     
     mode: 'production',
 
+    output: {
+        path: path.resolve(__dirname, "build"),
+        filename: "bundle.js",
+        clean: true,
+    },
+
     devtool: 'source-map',
 
 });
