@@ -35,8 +35,8 @@ document.addEventListener("click", ({ target }) => {
     }
 
     if (target.classList.contains("search__mobile-submit")) {
-        const value = document
-            .querySelector(".search__mobile-field").value.toLowerCase();
+        const searchField = document.querySelector(".search__mobile-field")
+        const value = searchField.value.toLowerCase();
         const result = [];
         //В базе данных получаем строки в виде тегов для поиска
         //и сравниваем с полученным значением.
@@ -50,6 +50,8 @@ document.addEventListener("click", ({ target }) => {
         foundResults.length === 0 &&
             setSearchWarning(`Nothing found at your request.
             Try another value`);
+        
+        searchField.value = "";    
     }
 });
 
